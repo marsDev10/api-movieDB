@@ -9,6 +9,7 @@
   --purple-medium-3: #5C218A;
   --purple-dark-1: #3E0F64;
   --purple-dark-2: #2A0646;
+  --black: #000;
 
   --yellow: #EECC75;
   --green: #CAD297;
@@ -26,7 +27,7 @@
 }
 
 html {
-  background-color: var(--purple-medium-3);
+  background-color: #fff;
 }
 
 body {
@@ -35,7 +36,7 @@ body {
   font-family: var(--font-family-text);
   font-weight: var(--font-weight-text1);
   font-size: 16px;
-  margin: 4px 0 0 0;
+  margin: 0;  
   padding: 0;
 }
 
@@ -87,6 +88,10 @@ button {
   cursor: pointer;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 /* Shared */
 .container-principal {
@@ -132,9 +137,10 @@ button {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 19.27%, rgba(0, 0, 0, 0) 29.17%), url(https://pics.filmaffinity.com/Deadpool-777527803-large.jpg);
   background-size: cover !important;
   height: 480px;
-  position: fixed;
-  top: 0;
+  /* position: fixed; */
+  /* top: 0; */
   width: 100%;
+  max-width: 813px;
 }
 
 .header-container--categoryView {
@@ -280,32 +286,32 @@ button {
 
 /* Movie Detail */
 .movieDetail-container {
-  border-top-left-radius: 16px;
+  /* border-top-left-radius: 16px;
   border-top-right-radius: 16px;
   padding: 32px 24px;
   margin-top: 403px;
   z-index: 1;
   position: absolute;
-  background-color: var(--purple-light-1);
+  background-color: var(--purple-light-1); */
 }
 
 .movieDetail-title {
-  display: inline-block;
+  /* display: inline-block;
   width: 80%;
   margin: 0 0 16px 0;
-  padding: 0;
+  padding: 0; */
 }
 
 .movieDetail-score {
-  display: inline-block;
+  /* display: inline-block;
   text-align: right;
   width: 18%;
-  font-weight: var(--font-weight-title2);
+  font-weight: var(--font-weight-title2); */
 }
 .movieDetail-score::before {
-  content: '★';
+  /* content: '★';
   color: var(--yellow);
-  padding-right: 4px;
+  padding-right: 4px; */
 }
 
 .movieDetail-description {
@@ -314,7 +320,6 @@ button {
 
 .relatedMovies-container {
   margin-top: 24px;
-  height: 216px;
 }
 
 .relatedMovies-title {
@@ -322,12 +327,12 @@ button {
 }
 
 .relatedMovies-scrollContainer {
-  position: absolute;
+  /* position: absolute;
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
-  width: calc(100vw - 24px);
-  padding-bottom: 16px;
+  width: calc(100% - 50px);
+  padding-bottom: 16px; */
 }
 
 .relatedMovies-scrollContainer .movie-container {
@@ -336,18 +341,18 @@ button {
 }
 
 .relatedMovies-scrollContainer .movie-img {
-  width: 125px;
+  /* width: 125px;
   min-width: 125px;
   max-width: 125px;
   height: 187.5px;
   min-height: 187.5px;
-  max-height: 187.5px;
+  max-height: 187.5px; */
 }
   
 
 /* Footer */
 footer {
-  background-color: var(--purple-medium-3);
+  background-color: #000;
   color: var(--purple-light-2);
   text-align: center;
   height: 48px;
@@ -361,3 +366,9 @@ footer {
 .inactive {
   display: none;
 }
+
+/* @media screen and (max-width: 800px) {
+    .header-container--long {
+      width: 100vw;
+    }
+} */

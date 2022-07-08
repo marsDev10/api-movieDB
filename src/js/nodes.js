@@ -4,7 +4,7 @@ const $ = (selector) => document.querySelector(selector);
 //Sections
 const $headerSection = $('#header');
 const $trendingPreviewSection = $('#trendingPreview');
-const $categoriesPreviewSection = $('#cateogiriesPreview');
+const $categoriesPreviewSection = $('#categoriesPreview');
 const $genericSection = $('#genericList');
 const $movieDetailSection = $('#movieDetail');
 
@@ -24,6 +24,7 @@ const $searchFormInput = $('#searchForm input');
 const $searchFormBtn = $('#searchBtn');
 
 const $trendingBtn = $('.trendingPreview-btn');
+const $categoryTitle = $('.category-title');
 
 const $movieDetailTitle = $('.movieDetail-title');
 const $movieDetailDescription = $('.movieDetail-description');
