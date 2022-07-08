@@ -7,7 +7,7 @@ import { getMovie } from '../petitions/getMovie.js';
 
 let idCategory;
 let titleCategory;
-let searchValue;
+let idMovie;
 
 document.addEventListener('click', e => {
     e.preventDefault();
@@ -15,9 +15,8 @@ document.addEventListener('click', e => {
 
     if(e.target === $searchFormBtn){
 
+        location.hash = `#search=${$searchForm.search.value}`;
         if(!$searchFormInput.value) return;
-        searchValue = $searchFormInput.value.trim().toLowerCase();
-        location.hash = `#search=${searchValue}`;
     }
 
     if(e.target === $trendingBtn){
@@ -28,7 +27,6 @@ document.addEventListener('click', e => {
     if(e.target === $arrowBtn){
         window.scrollTo(0,0);
 
-        console.log(window.history.length);
         window.history.back();
     }
 
@@ -41,8 +39,9 @@ document.addEventListener('click', e => {
     }
 
     if(e.target.matches('.movie-container *')){
-        console.log(e.target);
-        getMovie(e.target.dataset.id);
+
+        window.scrollTo(0,0);
+        location.hash = `#movie=${e.target.dataset.id}-${e.target.alt}`;
     }   
 });
 
@@ -55,13 +54,14 @@ export const navigator = () => {
         trendsPage();
     }else if(location.hash.startsWith('#search=')){
         
+        let searchValue = location.hash.split('=')[1]; 
         searchPage(searchValue);
     }else if(location.hash.startsWith('#movie=')){
-        
-        moviePage();
-    }else if(location.hash.startsWith('#category=')) {
-        console.log(titleCategory);
 
+        idMovie = location.hash.split('=')[1].split('-')[0];
+        moviePage(idMovie);
+    }else if(location.hash.startsWith('#category=')) {
+        
         $headerCategoryTitle.textContent = titleCategory;
         categoryPage(idCategory);
     }else {
