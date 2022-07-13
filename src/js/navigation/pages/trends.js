@@ -1,17 +1,22 @@
-export const trendsPage = () => {
+import { getAndAppendMovies } from '../../petitions/getAndAppendMovies.js';
 
-    console.log("Trends!!");
+export const trendsPage = () => {
+    
+    
+    getAndAppendMovies('trending/movie/day', $genericSection);
 
     $headerSection.classList.remove('header-container--long');
-    //$headerSection.style.background = '';
+    $headerSection.style.background = '';
     $arrowBtn.classList.remove('inactive');
     $arrowBtn.classList.remove('header-arrow--white');
     $headerTitle.classList.add('inactive');
     $headerCategoryTitle.classList.remove('inactive');
     $searchForm.classList.add('inactive');
+    $headerCategoryTitle.textContent = "TRENDS";
 
     $trendingPreviewSection.classList.add('inactive');
     $categoriesPreviewSection.classList.add('inactive');
     $genericSection.classList.remove('inactive');
     $movieDetailSection.classList.add('inactive');
+
 };

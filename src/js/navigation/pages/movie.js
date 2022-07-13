@@ -1,4 +1,5 @@
 import { getMovie } from '../../petitions/getMovie.js';
+import { getRelatedMovies } from '../../petitions/getRelatedMovies.js';
 
 export const moviePage = (id) => {
 
@@ -17,4 +18,6 @@ export const moviePage = (id) => {
     $categoriesPreviewSection.classList.add('inactive');
     $genericSection.classList.add('inactive');
     $movieDetailSection.classList.remove('inactive');
+
+    getRelatedMovies(id);
 };

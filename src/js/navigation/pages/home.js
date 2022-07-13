@@ -1,4 +1,3 @@
-// import { getTrendingMoviesPreview } from '../../petitions/getTrendingMovies.js';
 import { getCategoriesList } from '../../petitions/getCategoriesList.js';
 import { getAndAppendMovies } from '../../petitions/getAndAppendMovies.js';
 

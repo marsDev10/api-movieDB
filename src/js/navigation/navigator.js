@@ -22,6 +22,7 @@ document.addEventListener('click', e => {
     if(e.target === $trendingBtn){
 
         location.hash = "#trends";
+        console.log("Trends");
     }
 
     if(e.target === $arrowBtn){

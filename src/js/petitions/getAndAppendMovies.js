@@ -6,7 +6,7 @@ export const getAndAppendMovies = async (path, parentContainer, optionalConfig =
         const movies = data.results;
         const $fragment = d.createDocumentFragment();
         
-        console.log(data);
+        //console.log(data);
         if(data.total_results === 0) {
 
             parentContainer.innerHTML = `
