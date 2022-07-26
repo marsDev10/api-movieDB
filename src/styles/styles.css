@@ -187,10 +187,27 @@ img {
 
 
 /* Trending */
+.trendingPreview-container {
+  position: relative;
+  padding: 1rem;
+}
+.btnsTrending--button {
+  position: absolute;
+  top: 50%;
+  background-color: transparent;
+  font-size: 2rem;
+}
+.btn-prev {
+  left: 0;
+}
+.btn-next {
+  right: 0;
+}
 .trendingPreview-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .trendingPreview-btn {
@@ -200,14 +217,11 @@ img {
 }
 
 .trendingPreview-movieList {
-  overflow-x: scroll;
+  overflow-x: hidden;
   overflow-y: hidden;
   white-space: nowrap;
   height: 241px;
-  padding-left: 24px;
-  padding-bottom: 16px;
 }
-
 .trendingPreview-movieList .movie-container {
   display: inline-block;
   margin-right: 8px;
@@ -220,6 +234,7 @@ img {
   width: 150px;
   min-width: 150px;
   max-width: 150px;
+  background-color: #ccc;
 }
 
 
@@ -370,3 +385,12 @@ footer {
       width: 100vw;
     }
 } */
+
+@media screen and (max-width: 800px) {
+  .trendingPreview-movieList {
+    overflow-x: scroll;
+  }
+  .btnsTrending--button {
+    display: none;
+  }
+}
