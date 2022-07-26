@@ -3,7 +3,6 @@ import { trendsPage } from './pages/trends.js';
 import { searchPage } from './pages/search.js';
 import { categoryPage } from './pages/category.js';
 import { moviePage } from './pages/movie.js';
-import { getMovie } from '../petitions/getMovie.js';
 
 let idCategory;
 let titleCategory;
@@ -27,7 +26,7 @@ document.addEventListener('click', e => {
 
     if(e.target === $arrowBtn){
         window.scrollTo(0,0);
-
+        $headerSection.style.background = '';
         window.history.back();
     }
 
