@@ -17,7 +17,16 @@ d.addEventListener('click', e => {
 
     if(e.target.matches('.btnsTrending--button')){
 
-        console.log('click');
-        btnsTrends($trendingMoviesPreviewList,e.target.textContent);
+        let parent = e.target.parentNode;
+        
+        //Comparasión sobre el contenedor padre
+        //del elemento
+        if(parent === d.querySelector('.relatedMovies-container')){
+            btnsTrends($relatedMoviesContainer, e.target.textContent);
+        }else {
+            btnsTrends($trendingMoviesPreviewList,e.target.textContent);
+        }
     }
+
+
 });

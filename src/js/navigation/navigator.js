@@ -10,8 +10,7 @@ let idMovie;
 
 document.addEventListener('click', e => {
     e.preventDefault();
-
-
+    
     if(e.target === $searchFormBtn){
 
         location.hash = `#search=${$searchForm.search.value}`;

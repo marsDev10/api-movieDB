@@ -14,7 +14,6 @@ export const getAndAppendMovies = async (path, parentContainer, optionalConfig =
                     Total de resultados: ${data.total_results}
                 </h2>
             `;
-
             return;
         }
 
@@ -30,6 +29,7 @@ export const getAndAppendMovies = async (path, parentContainer, optionalConfig =
             $img.alt = `${movie.title}`;
             $movieContainer.appendChild($img);
             $fragment.appendChild($movieContainer);
+            
         });
 
         parentContainer.innerHTML = '';
