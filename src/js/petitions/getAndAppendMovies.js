@@ -1,5 +1,6 @@
 import { CustomAxios , d} from '../customAxios/customAxios.js';
 import { addImage } from '../lazyLoading/observerImage.js';
+import { scrollInfiniteAdd } from '../scrollInfinite/scrollInfinite.js';
 
 export const getAndAppendMovies = async (
     path,
@@ -7,8 +8,9 @@ export const getAndAppendMovies = async (
     optionalConfig = {}
     ,{ 
         lazyLoading = false,
-        clear =  false
-     } = {}
+        clear =  false,
+        scrollInfinite = false
+     } = {},
      ) => {
     try {
         const { data } = await CustomAxios(path, optionalConfig);
@@ -53,6 +55,13 @@ export const getAndAppendMovies = async (
                 
         });
         parentContainer.appendChild($fragment);
+
+        if(scrollInfinite){
+            let movies = parentContainer.querySelectorAll('.movie-container');
+
+            scrollInfiniteAdd(movies,path,parentContainer,optionalConfig.page);
+        }
+
     }catch(err) {
 
         console.log(err);

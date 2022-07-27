@@ -1,15 +1,19 @@
 import { getAndAppendMovies } from '../../petitions/getAndAppendMovies.js';
 
+let page = 1;
 export const trendsPage = () => {
     
     
     getAndAppendMovies(
         'trending/movie/day',
         $genericSection,
-        {},
+        {
+            page
+        },
         {
             lazyLoading: false,
-            clear: true
+            clear: true,
+            scrollInfinite: true
         },
     );
 
