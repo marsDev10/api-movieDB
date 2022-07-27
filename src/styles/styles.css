@@ -284,7 +284,6 @@ img {
 
 .trendingPreview-movieList .movie-container .movie-img {
   height: 225px;
-  min-height: 225px;
   max-height: 225px;
   width: 150px;
   min-width: 150px;
@@ -352,6 +351,7 @@ img {
 
 .genericList-container .movie-img {
   width: 100%;
+  min-height: 200px;
 }
 
 
@@ -397,6 +397,7 @@ img {
 
 .relatedMovies-scrollContainer {
   width: 100%;
+  height: 220px;
   overflow-x: hidden;
   overflow-y: hidden;
   white-space: nowrap;
@@ -415,6 +416,7 @@ img {
   height: 187.5px;
   min-height: 187.5px;
   max-height: 187.5px;
+  background-color: #ccc;
 }
   
 

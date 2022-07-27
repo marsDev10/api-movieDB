@@ -15,7 +15,7 @@ export const getCategoriesList = async () => {
             $title.id = `id${categorie.id}`;
             $title.dataset.id = categorie.id;
             $categoryContainer.appendChild($title);
-
+            
             $fragment.appendChild($categoryContainer);
         });
 

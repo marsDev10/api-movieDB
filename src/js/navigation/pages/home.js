@@ -4,7 +4,11 @@ import { getAndAppendMovies } from '../../petitions/getAndAppendMovies.js';
 export const homePage = () => {
 
     //getTrendingMoviesPreview();
-    getAndAppendMovies('trending/movie/day', $trendingMoviesPreviewList);
+    getAndAppendMovies('trending/movie/day',
+    $trendingMoviesPreviewList,{}, {
+        lazyLoading: true,
+        clear: true
+    });
     getCategoriesList();
 
     $headerSection.classList.remove('header-container--long');

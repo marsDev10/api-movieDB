@@ -3,7 +3,15 @@ import { getAndAppendMovies } from '../../petitions/getAndAppendMovies.js';
 export const trendsPage = () => {
     
     
-    getAndAppendMovies('trending/movie/day', $genericSection);
+    getAndAppendMovies(
+        'trending/movie/day',
+        $genericSection,
+        {},
+        {
+            lazyLoading: false,
+            clear: true
+        },
+    );
 
     $headerSection.classList.remove('header-container--long');
     $headerSection.style.background = '';

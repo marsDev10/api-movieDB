@@ -16,7 +16,7 @@ export const getMovie = async (id) => {
         const $fragment = d.createDocumentFragment();
 
         data.genres.map( category => {
-
+    
             const $categoryContainer = d.createElement('div');
             $categoryContainer.classList.add('category-container');
             const $title = d.createElement('h3');

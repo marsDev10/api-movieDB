@@ -22,5 +22,9 @@ export const searchPage = (searchValue) => {
         params: {
             query: searchValue
         }
+    },
+    {
+        lazyLoading: false,
+        clear: true
     });
 };

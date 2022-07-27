@@ -21,7 +21,11 @@ export const categoryPage = (id) => {
     getAndAppendMovies('discover/movie', $genericSection, {
         params: { 
             with_genres: id,
-        }
+        },
+    },
+    {
+        lazyLoading: false,
+        clear: true,
     })
 };
 
