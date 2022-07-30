@@ -1,6 +1,5 @@
 import { getAndAppendMovies } from '../../petitions/getAndAppendMovies.js';
 
-let page = 1;
 export const trendsPage = () => {
     
     
@@ -8,7 +7,9 @@ export const trendsPage = () => {
         'trending/movie/day',
         $genericSection,
         {
-            page
+            params: {
+                page: 1
+            }
         },
         {
             lazyLoading: false,

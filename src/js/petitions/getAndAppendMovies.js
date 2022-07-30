@@ -5,7 +5,8 @@ import { scrollInfiniteAdd } from '../scrollInfinite/scrollInfinite.js';
 export const getAndAppendMovies = async (
     path,
     parentContainer,
-    optionalConfig = {}
+    optionalConfig = {
+    }
     ,{ 
         lazyLoading = false,
         clear =  false,
@@ -17,7 +18,7 @@ export const getAndAppendMovies = async (
         const movies = data.results;
         const $fragment = d.createDocumentFragment();
         
-        //console.log(data);
+        console.log(optionalConfig);
         if(data.total_results === 0) {
 
             parentContainer.innerHTML = `
@@ -54,17 +55,17 @@ export const getAndAppendMovies = async (
             }
                 
         });
+
         parentContainer.appendChild($fragment);
 
         if(scrollInfinite){
             let movies = parentContainer.querySelectorAll('.movie-container');
 
-            scrollInfiniteAdd(movies,path,parentContainer,optionalConfig.page);
+            scrollInfiniteAdd(movies,path,parentContainer,optionalConfig.params.page);
         }
 
     }catch(err) {
 
         console.log(err);
     }
-    
 };

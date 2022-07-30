@@ -23,7 +23,7 @@ export const getCategoriesList = async () => {
         $categoriesPreviewList.appendChild($fragment);    
     } catch (err){
         
-        console.log(err);
+        console.error(err);
     }
     
 }

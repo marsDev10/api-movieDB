@@ -28,6 +28,7 @@
 
 html {
   background-color: #fff;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -147,8 +148,21 @@ img {
   }
 }
 
+.btn-scrollTop {
+  position: fixed;
+  right: .5rem;
+  bottom: .5rem;
+  font-size: 2rem;
+  background-color: transparent;
+}
+
+.hidden {
+  display: none;
+}
+
 /* Shared */
 .container-principal {
+    position: relative;
     max-width: 800px;
     margin: 0 auto;
 }

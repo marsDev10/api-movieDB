@@ -27,14 +27,14 @@ export const getMovie = async (id) => {
             $categoryContainer.appendChild($title);
 
             $fragment.appendChild($categoryContainer);
-            console.log(category);
+            //console.log(category);
         });
 
         $movieDetailCategorieList.innerHTML = '';
         $movieDetailCategorieList.appendChild($fragment);
     }catch(err){
 
-        console.log(err);
+        console.error(err);
     }
     
 }

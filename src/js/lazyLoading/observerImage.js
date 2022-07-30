@@ -5,7 +5,7 @@ let options = {
 
 const callback = (entries) => {
 
-    console.log(entries);
+    //console.log(entries);
     entries.forEach((entry) => {
 
         if(entry.isIntersecting){

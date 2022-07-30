@@ -25,6 +25,7 @@ export const searchPage = (searchValue) => {
     },
     {
         lazyLoading: false,
-        clear: true
+        clear: true,
+        scrollInfinite: true
     });
 };

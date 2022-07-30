@@ -2,7 +2,8 @@
 import { getAndAppendMovies } from '../../petitions/getAndAppendMovies.js';
 
 export const categoryPage = (id) => {
-
+    
+    window.scrollTo(0,0);
     $headerCategoryTitle.textContent = location.hash.split('-')[1].toUpperCase().split('%')[0];
     $headerSection.classList.remove('header-container--long');
     $headerSection.style.background = '';
@@ -18,14 +19,17 @@ export const categoryPage = (id) => {
     $movieDetailSection.classList.add('inactive');
 
     //getMoviesByCategory(id);
-    getAndAppendMovies('discover/movie', $genericSection, {
+    getAndAppendMovies('discover/movie', $genericSection, 
+    {
         params: { 
             with_genres: id,
+            page: 1
         },
     },
     {
         lazyLoading: false,
         clear: true,
+        scrollInfinite: true
     })
 };
 

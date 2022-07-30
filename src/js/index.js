@@ -1,7 +1,10 @@
 import { navigator } from './navigation/navigator.js';
 import { btnsTrends } from './interactive/btnsTrends.js';
+
 const d = document;
 const w = window;
+
+const $btnScrollTop = d.querySelector('.btn-scrollTop');
 
 d.addEventListener('DOMContentLoaded', e => {
     
@@ -28,5 +31,21 @@ d.addEventListener('click', e => {
         }
     }
 
+    if(e.target.matches('.btn-scrollTop')){
 
+        console.log(e.target);
+        w.scrollTo(0,0);
+    }
+
+});
+
+
+d.addEventListener('scroll', e => {
+
+    if(w.pageYOffset > 500){
+        $btnScrollTop.classList.remove('hidden');
+        return;
+    }
+    $btnScrollTop.classList.add('hidden');
+    return;
 });

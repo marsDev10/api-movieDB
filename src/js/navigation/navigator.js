@@ -46,7 +46,7 @@ document.addEventListener('click', e => {
 
 export const navigator = () => {
     
-    console.log({ location });
+    //console.log({ location });
 
     if(location.hash.startsWith('#trends')){
         
